@@ -1,4 +1,5 @@
 .nav {
+  // position: relative;
   @include flexible(flex-start, center, wrap, column);
   height: 100vh;
   width: 5%;
@@ -6,7 +7,9 @@
   background: $theme-bg;
 
   @include md {
-    display: none;
+    @include flexible(space-between, center);
+    width: 100%;
+    height: 70px;
   }
 
   //------------------ .nav__link --------------------
@@ -34,8 +37,13 @@
     background-color: #ffffff;
 
     box-shadow: 5px -1px 5px  #888888;
+
+    @include md {
+      width: 70px;
+    }
   }
 
+//------------------ All &__link except first-child ----------------------
   &__link:last-child {
     margin-top: auto;
     background: url(../../source/img/nav/power-button.png) no-repeat center;
@@ -84,4 +92,50 @@
 
     }
   }
+//------------------------- nav__items hide, nav_burger show ------------
+  &__link:nth-child(1n + 2) {
+    @include md {
+      display: none;
+    }
+  }
+}
+
+//------------------------- Gamburger menu ------------------------------
+.nav__gamburger {
+  display: none;
+  position: relative;
+  flex-direction: column;
+
+  width: 30px;
+  height: 5px;
+  margin-right: 1em;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  @include md {
+    display: flex;
+  }
+}
+
+
+.nav__gamburger::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 5px;
+
+  background-color: #ffffff;
+}
+
+.nav__gamburger::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 5px;
+
+  background-color: #ffffff;
 }

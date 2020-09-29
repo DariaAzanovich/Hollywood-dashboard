@@ -11,24 +11,33 @@ body {
 
 .wrap {
   position: relative;
-  @include flexible(flex-start, flex-start, wrap);
+  @include flexible(center, flex-start, wrap);
   // width: $max-width;
   max-width: $max-width;
   margin: 0 auto;
 
   font-family: 'Lato', sans-serif;
+
+  // @include md {
+  //   margin: 0;
+  // }
 }
 
 .container {
   @include flexible(flex-start, flex-start, wrap);
   width: 94.8%;
+
   @include sm {
     @include flexible(flex-start, center, nowrap, column);
+  }
+
+  @include md {
+    width: 100%;
   }
 }
 
 .container-inside {
-  @include flexible(flex-end, center, nowrap, column);
+  @include flexible(flex-start, center, nowrap, column);
   
   width: $container-inside-width;
 
