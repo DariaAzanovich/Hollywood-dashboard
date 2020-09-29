@@ -2,7 +2,7 @@
   // align-self: flex-end;
   @include flexible(center, center, nowrap, column);
   width: 100%;
-// ---------- aside__bar ------------------
+// -------------------- .aside__bar ------------------------------
   &__bar {
 
     @include flexible(center, center);
@@ -22,14 +22,14 @@
       content: '';
       position: absolute;
       top: 100%;
-      left: 40%;
+      left: calc(50% - #{$triangle-base} / 2);
 
       width: 0;
       height: 0;
 
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 8px solid #c44456;
+      border-left: $triangle-edge solid transparent;
+      border-right: $triangle-edge solid transparent;
+      border-top: $triangle-base solid #c44456;
 
     }
 
@@ -37,6 +37,8 @@
       background-color: #c44456;
     }
   }
+
+// -------------------- .aside__link ------------------------------
 
   &__link--users {
     background: url(../../source/img/aside/icons/users.png) no-repeat center;

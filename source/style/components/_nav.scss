@@ -44,11 +44,6 @@
   }
 
 //------------------ All &__link except first-child ----------------------
-  &__link:last-child {
-    margin-top: auto;
-    background: url(../../source/img/nav/power-button.png) no-repeat center;
-  }
-
   &__link--home {
     background: url(../../source/img/nav/home.png) no-repeat center;
   }
@@ -69,14 +64,19 @@
     background: url(../../source/img/nav/information.png) no-repeat center;
   }
 
-// -------------------- :hover ---------------------------
+  &__link--power-btn{
+    margin-top: auto;
+    background: url(../../source/img/nav/power-button.png) no-repeat center;
+  }
+
+// -------------------- :hover ----------------------------------
   &__link:first-child:hover {
     background-color: #f2fff3;
   }
 
   &__link:hover {
     background-color: #fc6863;
-
+//---------------------- triangular pointer ----------------------
     &:nth-child(1n + 2):after {
       content: '';
       position: absolute;
@@ -86,9 +86,9 @@
       width: 0;
       height: 0;
 
-      border-top: 6px solid transparent;
-      border-left: 8px solid $theme-color;
-      border-bottom: 6px solid transparent;
+      border-top: $triangle-edge solid transparent;
+      border-left: $triangle-base solid $theme-color;
+      border-bottom: $triangle-edge solid transparent;
 
     }
   }
