@@ -85,20 +85,10 @@
     }    
 
     &-text span {
-      @include paragraf-style;
+      @include paragraph-style;
     }  
 
     &-btn {
-      // height: 20px;
-      // width: 20px;
-
-      // border: none;
-      // background: url(../../source/img/aside/icons/chat-grey.png) no-repeat center;
-
-      // &:hover {
-      //   animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-      // }
-
       @include btn-style($pic-chat-grey);
       @include bnt-input-border;      
     }
@@ -126,7 +116,7 @@
 
     width: 100%;
     padding: 1em 0;
-    @include paragraf-style;
+    @include paragraph-style;
     background-color: #fcfcfc;
     
     &-line {

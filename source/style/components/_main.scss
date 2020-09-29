@@ -16,12 +16,19 @@
 
   &__box {
     // align-self: flex-start;
-    @include flexible(flex-start, center, nowrap, column);
+    @include flexible(center, center, nowrap, column);
 
     // width: 644px;
     // height: 100px;
     margin-right: 1.25em;
     margin-bottom: 1.25em;
+    
+    box-shadow: 0px 0px 10px #888888;
+  }
+
+  &__title {
+    @include primary-title;
+    margin-bottom: 1.875em;
   }
 }
 
@@ -59,9 +66,46 @@
 
 .progress-statistic,
 .shipments {
+  @include statistic-text-list;
+
   width: 241px;
-  height: 245px;
+  // height: 245px;
   padding: 1em;
 
-  background-color:darkslateblue;
+  background-color:#ffffff;
+
+  &__img {
+    margin-bottom: 1.5em;
+  }
+
+  &__text {
+    font-weight: 900;
+    font-size: 20px;    
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.progress-statistic {
+  &__content {
+    @include flexible(center, center, nowrap, column);
+  }
+
+  &__text {
+    background: linear-gradient(#64699a, #666697, #6d3576);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.shipments {
+  &__content {
+    @include flexible(space-around, center, nowrap, row);
+  }
 }

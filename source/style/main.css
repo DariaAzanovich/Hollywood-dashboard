@@ -692,9 +692,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -706,6 +706,15 @@ body {
           flex-direction: column;
   margin-right: 1.25em;
   margin-bottom: 1.25em;
+  -webkit-box-shadow: 0px 0px 10px #888888;
+          box-shadow: 0px 0px 10px #888888;
+}
+
+.main__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #767676;
+  margin-bottom: 1.875em;
 }
 
 .monthly-revelue {
@@ -739,9 +748,118 @@ body {
 .progress-statistic,
 .shipments {
   width: 241px;
-  height: 245px;
   padding: 1em;
-  background-color: darkslateblue;
+  background-color: #ffffff;
+}
+
+.progress-statistic__text,
+.shipments__text {
+  margin-bottom: 0.5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fc6863), color-stop(#fc6c61), to(#fd5570));
+  background: linear-gradient(#fc6863, #fc6c61, #fd5570);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.progress-statistic__list,
+.shipments__list {
+  width: 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.progress-statistic__item,
+.shipments__item {
+  font-size: 12px;
+  color: #777777;
+}
+
+.progress-statistic__item:first-child,
+.shipments__item:first-child {
+  list-style-image: url(../../source/img/purple-triangle.png);
+}
+
+.progress-statistic__item:last-child,
+.shipments__item:last-child {
+  list-style-image: url(../../source/img/pink-triangle.png);
+}
+
+.progress-statistic__img,
+.shipments__img {
+  margin-bottom: 1.5em;
+}
+
+.progress-statistic__text,
+.shipments__text {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.progress-statistic__content,
+.shipments__content {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .progress-statistic,
+  .shipments {
+    width: 100%;
+  }
+}
+
+.progress-statistic__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.progress-statistic__text {
+  background: -webkit-gradient(linear, left top, left bottom, from(#64699a), color-stop(#666697), to(#6d3576));
+  background: linear-gradient(#64699a, #666697, #6d3576);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shipments__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .aside {

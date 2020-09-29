@@ -12,15 +12,10 @@ body {
 .wrap {
   position: relative;
   @include flexible(center, flex-start, wrap);
-  // width: $max-width;
   max-width: $max-width;
   margin: 0 auto;
 
   font-family: 'Lato', sans-serif;
-
-  // @include md {
-  //   margin: 0;
-  // }
 }
 
 .container {
