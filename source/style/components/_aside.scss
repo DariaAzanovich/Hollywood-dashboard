@@ -52,39 +52,61 @@
     background: url(../../source/img/aside/icons/like.png) no-repeat center;
   }
 
-// ------------------- aside__content -----------------------
+// ------------------- aside-list -----------------------
 
-  &__content {
+  &__list {
     @include flexible(center, flex-start, nowrap, column);
     width: 100%;
+    padding: 0;
+
   }
 
-  &__chat-user {
+  &__item {
     position: relative;
-    @include flexible(flex-start, center, nowrap);
+    @include flexible(space-around, center, nowrap);
     width: 100%;
     padding: 20px 0;
-    
-    background: url(../../source/img/aside/icons/chat-grey.png) no-repeat right;
 
+    border-bottom: 2px solid #f2f2f2;
+    
     & img {
       height: 42px;
       width: 42px;
     }
 
-    & p {
-      max-width: 130px;
+    &-text {
+      @include flexible(center, flex-start, nowrap, column);
+      width: 120px;
+    }
+
+    &-text p {      
       font-size: 13px;
       @include primary-title;
     }    
 
-    & p span {
+    &-text span {
       @include paragraf-style;
     }  
 
-    & img,
-    & p,
-    & p span {
+    &-btn {
+      height: 16px;
+      width: 20px;
+
+      border: none;
+      background: url(../../source/img/aside/icons/chat-grey.png) no-repeat center;
+
+      &:hover {
+        animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+
+  /*  & img,
+    &-text {
       margin: 0 15px;
     }
 
@@ -97,8 +119,8 @@
       height: 2px;
       width: 80%;
       background-color: #f2f2f2;
-    }
-  }
+    } */
+  } 
 
   // ---------------------- aside__search-line -------------------
 
