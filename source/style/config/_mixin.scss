@@ -28,6 +28,30 @@
   color: $theme-paragraf-color;
 }
 
+//---------------- Buttons & input style modules ---------------------
+@mixin bnt-input-border {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+
+@mixin btn-style($url) {
+  height: 20px;
+  width: 20px;
+
+  border: none;
+  background: $url no-repeat center;
+
+  &:hover {
+    animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  }
+
+  @include bnt-input-border;
+}
+
+
 //------------------ Adaptive for different screen sizes -------------
   
 // Small devices
@@ -57,3 +81,4 @@
       @content;
   }
 }
+
