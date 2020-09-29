@@ -1,0 +1,23 @@
+//---------------- Layout widths ------------
+$max-width: 1366px;
+$container-inside-width: 271px;
+
+//---------------- Layout colors ---------------
+$theme-color: #fc715d;
+$theme-bg: linear-gradient(#fc6863, #fc6c61, #fd5570);
+$theme-title-color: #767676;
+$theme-paragraf-color: #777777;
+
+//--------------- Screen sizes ----------------
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1280px;

@@ -1,0 +1,67 @@
+.main {
+  @include flexible(space-between, center, wrap);
+  // height: 87.7vh;
+  // max-height: 835px;
+  @include sm {
+    width: 100%;
+  }
+  
+  width: calc(100% - #{$container-inside-width});
+  min-width: 320px;
+
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+
+  background-color: #ebebeb;
+
+  &__box {
+    // align-self: flex-start;
+    @include flexible(flex-start, center, nowrap, column);
+
+    // width: 644px;
+    // height: 100px;
+    margin-right: 1.25em;
+    margin-bottom: 1.25em;
+  }
+}
+
+.monthly-revelue {
+  width: 71%;
+  height: 266px;
+  padding: 1em;
+
+  background: url(../../source/img/main/monthly-revenue-progress.png) darkslateblue center no-repeat;
+}
+
+.revenue-hour {
+  width: 24%;
+  height: 266px;
+  padding: 1em;
+
+  background: url(../../source/img/main/revenue-per-hour.png) darkslateblue center no-repeat;
+}
+
+.customers-feed {
+  width: 467px;
+  height: 508px;
+  padding: 1em;
+
+  background-color:darkslateblue;
+}
+
+.todays-task {
+  width: 501px;
+  height: 245px;
+  padding: 1em;
+
+  background-color:darkslateblue;
+}
+
+.progress-statistic,
+.shipments {
+  width: 241px;
+  height: 245px;
+  padding: 1em;
+
+  background-color:darkslateblue;
+}

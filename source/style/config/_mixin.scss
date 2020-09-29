@@ -1,0 +1,59 @@
+//--------------------- Flexbox Layout --------------------------
+
+@mixin flexible($content, $items, $wrap: nowrap, $direction: row) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+
+// @mixin adaptive-font($pcSize, $mobSize) {
+//   $addSize: $pcSize - $mobSize;
+//   $max-width: $max-width - 320;
+//   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$max-width}));
+// }
+
+
+//------------------- Text style modules -----------------------
+
+@mixin primary-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: $theme-title-color;
+}
+
+@mixin paragraf-style {
+  font-size: 12px;
+  color: $theme-paragraf-color;
+}
+
+//------------------ Adaptive for different screen sizes -------------
+  
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+      @content;
+  }
+}

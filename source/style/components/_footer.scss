@@ -1,0 +1,55 @@
+.footer { background-color: darkseagreen;
+  @include flexible(space-around, center, wrap, column);  
+  // height: 229px;
+  width: 100%;
+  padding: 1.5em;
+
+  &__title {
+    @include primary-title;
+    margin-bottom: 1.5em;
+  }
+
+  &__list {
+    @include flexible(center, center, wrap); 
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {    
+    height: 55px;
+    width: 55px;
+    margin: 6.5px;  
+
+    border-radius: 15px; 
+    
+    &--rdio {
+      background-color: #655ba5;
+    } 
+
+    &--css-3 {
+      background-color: #3fb6a4;
+    }
+     
+    &--deviantart {
+      background-color: #936c6a;
+    }
+     
+    &--xing {
+      background-color: #655ba5;
+    }
+     
+    &--vimeo {
+      background-color: #4082bf;
+    }
+     
+    &--vk {
+      background-color: #ffa500;
+    }
+  }
+
+  &__link {
+    @include flexible(center, center); 
+    height: 100%;
+    width: 100%;
+  }
+}

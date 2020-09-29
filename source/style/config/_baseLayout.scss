@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.wrap {
+  position: relative;
+  @include flexible(flex-start, flex-start, wrap);
+  // width: $max-width;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  @include flexible(flex-start, flex-start, wrap);
+  width: 94.8%;
+  @include sm {
+    @include flexible(flex-start, center, nowrap, column);
+  }
+}
+
+.container-inside {
+  @include flexible(flex-end, center, nowrap, column);
+  
+  width: $container-inside-width;
+
+  @include sm {
+    width: 100%;
+  }
+  // height: 835px; 
+}
