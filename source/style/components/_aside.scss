@@ -1,4 +1,4 @@
-.aside {background-color: wheat;
+.aside {//background-color: wheat;
   // align-self: flex-end;
   @include flexible(center, center, nowrap, column);
   width: 100%;
@@ -124,6 +124,7 @@
 
       border: none;
       border-bottom: 2px solid #e9e9e9;
+      background-color: #fcfcfc;
 
       @include bnt-input-border;
     }

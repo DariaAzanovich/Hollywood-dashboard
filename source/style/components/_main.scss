@@ -24,32 +24,36 @@
     margin-bottom: 1.25em;
     
     box-shadow: 0px 0px 10px #888888;
+    background-color:#ffffff;
   }
 
   &__title {
     @include primary-title;
     margin-bottom: 1.875em;
+
+    &--left {
+      align-self: flex-start;
+    }
+  }
+
+  &__img {
+    margin-bottom: 1.5em;
   }
 }
 
 .monthly-revelue {
-  width: 71%;
-  height: 266px;
+  @include flexible(center, center, nowrap, column);
+  @include statistic-text;
+  // width: 71%;
+  // height: 266px;
   padding: 1em;
 
-  background: url(../../source/img/main/monthly-revenue-progress.png) darkslateblue center no-repeat;
-}
-
-.revenue-hour {
-  width: 24%;
-  height: 266px;
-  padding: 1em;
-
-  background: url(../../source/img/main/revenue-per-hour.png) darkslateblue center no-repeat;
+  // background: url(../../source/img/main/monthly-revenue-progress.png) darkslateblue center no-repeat;
+  overflow-x: auto;
 }
 
 .customers-feed {
-  width: 467px;
+  width: 35%;
   height: 508px;
   padding: 1em;
 
@@ -57,26 +61,25 @@
 }
 
 .todays-task {
-  width: 501px;
+  flex-grow: 10;
+  width: 60%;
   height: 245px;
   padding: 1em;
 
   background-color:darkslateblue;
 }
 
+.revenue-hour,
 .progress-statistic,
 .shipments {
-  @include statistic-text-list;
+  @include statistic-text;
+  @include statistic-list;
 
   width: 241px;
   // height: 245px;
   padding: 1em;
 
   background-color:#ffffff;
-
-  &__img {
-    margin-bottom: 1.5em;
-  }
 
   &__text {
     font-weight: 900;
@@ -90,6 +93,14 @@
   @include sm {
     width: 100%;
   }
+}
+
+.revenue-hour {
+  width: 264px;
+
+  // &__list {
+  //   margin: 1em 0;
+  // }
 }
 
 .progress-statistic {
@@ -108,4 +119,22 @@
   &__content {
     @include flexible(space-around, center, nowrap, row);
   }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+//------------------------ Widgets wrapper -------------------------------
+
+.wrap-main {
+  width: 100%;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.wrap-inner {
+  max-width: 60%;
+  justify-content: space-between;
+  margin: 0;
 }
