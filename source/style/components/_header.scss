@@ -1,8 +1,6 @@
-.header {background-color: cadetblue;
+.header {
   @include flexible(center, flex-start, nowrap, column);
   width: 100%;
-
-  // overflow: hidden;
 }
 
 //------------------------------ .header__nav ------------------------
@@ -20,8 +18,8 @@
 
   &__btn {    
     @include bnt-input-border;    
-    height: 70px;
-    width: 70px; 
+    
+    flex-grow: 1;
     
     @include md {
       width: 30px;
@@ -78,8 +76,8 @@
     }
 
     @include md {
-      margin: 0;
-      width: $small-btn-size;
+      margin: 0 $line-width;
+      width: $big-btn-size;
       &::placeholder {
         color: transparent;
       }
@@ -163,7 +161,6 @@
     @include flexible(center, flex-start, nowrap, column);
     padding: 1em; 
     min-width: 120px;   
-    // color: $theme-color;
   }
 
   &__btn {

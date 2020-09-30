@@ -71,7 +71,7 @@
 
 // -------------------- :hover ----------------------------------
   &__link:first-child:hover {
-    background-color: #f2fff3;
+    background-color:$hover-color;
   }
 
   &__link:hover {

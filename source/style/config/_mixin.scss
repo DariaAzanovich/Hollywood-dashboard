@@ -39,14 +39,14 @@
 
 @mixin btn-style($url, $btn-size, $border-w: 0) {
   height: $btn-size;
-  width: $btn-size;
+  width: $small-btn-size;
 
   border: none;
   border-right: $border-w solid #f1f1f1;
   background: transparent $url no-repeat center;
 
-  &:hover {
-    animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  &:hover {    
+    background-color: $hover-color;
   }
 
   @include bnt-input-border;

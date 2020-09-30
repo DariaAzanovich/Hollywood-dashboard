@@ -591,7 +591,7 @@ body {
 }
 
 .nav__link:first-child:hover {
-  background-color: #f2fff3;
+  background-color: #fffafa;
 }
 
 .nav__link:hover {
@@ -657,7 +657,6 @@ body {
 }
 
 .header {
-  background-color: cadetblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -702,8 +701,9 @@ body {
 }
 
 .header-nav__btn {
-  height: 70px;
-  width: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .header-nav__btn:active, .header-nav__btn:focus {
@@ -718,15 +718,14 @@ body {
 
 .header-nav__btn--more {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 2px solid #f1f1f1;
   background: transparent url(../../source/img/header/more.png) no-repeat center;
 }
 
 .header-nav__btn--more:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--more:active, .header-nav__btn--more:focus {
@@ -735,15 +734,14 @@ body {
 
 .header-nav__btn--folder {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 2px solid #f1f1f1;
   background: transparent url(../../source/img/header/folder.png) no-repeat center;
 }
 
 .header-nav__btn--folder:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--folder:active, .header-nav__btn--folder:focus {
@@ -752,15 +750,14 @@ body {
 
 .header-nav__btn--properties {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 2px solid #f1f1f1;
   background: transparent url(../../source/img/header/properties.png) no-repeat center;
 }
 
 .header-nav__btn--properties:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--properties:active, .header-nav__btn--properties:focus {
@@ -769,7 +766,7 @@ body {
 
 .header-nav__btn--upload {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 2px solid #f1f1f1;
   background: transparent url(../../source/img/header/upload.png) no-repeat center;
@@ -777,8 +774,7 @@ body {
 }
 
 .header-nav__btn--upload:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--upload:active, .header-nav__btn--upload:focus {
@@ -787,15 +783,14 @@ body {
 
 .header-nav__btn--envelope {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 2px solid #f1f1f1;
   background: transparent url(../../source/img/header/envelope.png) no-repeat center;
 }
 
 .header-nav__btn--envelope:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--envelope:active, .header-nav__btn--envelope:focus {
@@ -804,15 +799,14 @@ body {
 
 .header-nav__btn--planet {
   height: 70px;
-  width: 70px;
+  width: 30px;
   border: none;
   border-right: 0 solid #f1f1f1;
   background: transparent url(../../source/img/header/planet.png) no-repeat center;
 }
 
 .header-nav__btn--planet:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__btn--planet:active, .header-nav__btn--planet:focus {
@@ -873,8 +867,8 @@ body {
 
 @media (max-width: 768px) {
   .header-nav__search {
-    margin: 0;
-    width: 30px;
+    margin: 0 2px;
+    width: 70px;
   }
   .header-nav__search::-webkit-input-placeholder {
     color: transparent;
@@ -969,8 +963,7 @@ body {
 }
 
 .header-nav__user-btn:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .header-nav__user-btn:active, .header-nav__user-btn:focus {
@@ -1557,8 +1550,7 @@ body {
 }
 
 .aside__item-btn:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .aside__item-btn:active, .aside__item-btn:focus {
@@ -1612,8 +1604,7 @@ body {
 }
 
 .aside__search-btn-loupe:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .aside__search-btn-loupe:active, .aside__search-btn-loupe:focus {
@@ -1629,8 +1620,7 @@ body {
 }
 
 .aside__search-btn-pencil:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .aside__search-btn-pencil:active, .aside__search-btn-pencil:focus {
