@@ -1,11 +1,131 @@
 .header {background-color: cadetblue;
+  @include flexible(center, flex-start, nowrap, column);
   width: 100%;
 
-  @include flexible(center, flex-start, nowrap, column);
-
-  overflow: hidden;
+  // overflow: hidden;
 }
 
+//------------------------------ .header__nav ------------------------
+.header-nav {
+  @include flexible(space-around, center, nowrap);
+  width: 100%;
+
+  border-bottom: 2px solid #f1f1f1;
+  
+  &__form {
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__btn {    
+    @include bnt-input-border;    
+    height: 70px;
+    width: 70px; 
+    
+    @include md {
+      width: 30px;
+    }
+    
+    &--more {
+      @include btn-style($pic-more, $big-btn-size, $line-width);
+    }
+
+    &--folder {
+      @include btn-style($pic-folder, $big-btn-size, $line-width);
+    }
+
+    &--properties {
+      @include btn-style($pic-properties, $big-btn-size, $line-width);
+    }
+
+    &--upload {
+      @include btn-style($pic-upload, $big-btn-size, $line-width);
+      border-left: $line-width solid #f7f7f7;
+    }
+
+    &--envelope {
+      @include btn-style($pic-envelope, $big-btn-size, $line-width);
+    }
+
+    &--planet {
+      @include btn-style($pic-planet, $big-btn-size);
+    }    
+  }
+
+  &__form {
+    @include flexible(space-around, center, nowrap);
+    flex-grow: 2;
+
+    @include sm {
+     display: none;
+    }
+  }
+
+  //-------------- .header-nav__search
+  &__search {
+    margin: 0 10%;
+    width: 30%;
+    min-width: 40px;
+    font-size: 12px;
+
+    background: right / contain no-repeat $pic-search, #fcfcfc;
+    border: 5px solid transparent;
+    border-radius: 15px;
+
+    &::placeholder {
+      color: #c8c8c8;
+    }
+
+    @include md {
+      margin: 0;
+      width: $small-btn-size;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  //------------- .header-nav__user
+  &__user {
+    @include flexible(space-between, center, nowrap);
+    width: 254px;
+
+    @include sm {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &-pic {
+      margin-right: 1.125em;
+    }
+
+    &-text {
+      @include flexible(center, flex-start, nowrap, column);
+      margin-right: 3em;
+      white-space: nowrap;
+    }
+
+    &-text p {      
+      @include primary-title;
+      margin-bottom: 0.5em;
+
+      font-size: 13px;
+    }    
+
+    &-text span {
+      @include paragraph-style;
+    }
+
+    &-btn {
+      @include bnt-input-border;
+      @include btn-style($pic-user-settings, $small-btn-size);
+    }
+  }
+
+}
+
+//------------------------------ .header__daily ----------------------
 .header-daily {
   width: 100%;
   @include flexible(flex-start, center, nowrap);

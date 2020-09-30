@@ -79,9 +79,11 @@
       width: 120px;
     }
 
-    &-text p {      
+    &-text p {    
+      @include primary-title;  
+      margin-bottom: 0.5em;
+      
       font-size: 13px;
-      @include primary-title;
     }    
 
     &-text span {
@@ -89,7 +91,7 @@
     }  
 
     &-btn {
-      @include btn-style($pic-chat-grey);
+      @include btn-style($pic-chat-grey, $small-btn-size);
       @include bnt-input-border;      
     }
 
@@ -130,11 +132,11 @@
     }
 
     &-btn-loupe {
-      @include btn-style($pic-search);
+      @include btn-style($pic-search, $small-btn-size);
     }
 
     &-btn-pencil {
-      @include btn-style($pic-pencil);
+      @include btn-style($pic-pencil, $small-btn-size);
     }
   }
 

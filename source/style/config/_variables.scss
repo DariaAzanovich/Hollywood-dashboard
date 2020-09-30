@@ -26,7 +26,22 @@ $screen-xl-max: 1280px;
 $triangle-base: 8px;
 $triangle-edge: 6px;
 
+//--------------------- Pic btn sizes ------------------------------
+$small-btn-size: 30px;
+$big-btn-size: 70px;
+
+//
+$line-width: 2px;
+
 //--------------------- Pictures url -------------------------------
+$pic-more: url(../../source/img/header/more.png);
+$pic-folder: url(../../source/img/header/folder.png);
+$pic-properties: url(../../source/img/header/properties.png);
+$pic-upload: url(../../source/img/header/upload.png);
+$pic-envelope: url(../../source/img/header/envelope.png);
+$pic-planet: url(../../source/img/header/planet.png);
+$pic-user-settings: url(../../source/img/header/user-settings.png);
+
 $pic-chat-grey: url(../../source/img/aside/icons/chat-grey.png);
-$pic-search: url(../../source/img/aside/icons/search.png);
+$pic-search: url(../../source/img/search.png);
 $pic-pencil: url(../../source/img/aside/icons/pencil.png);

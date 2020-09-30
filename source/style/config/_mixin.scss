@@ -37,12 +37,13 @@
   }
 }
 
-@mixin btn-style($url) {
-  height: 20px;
-  width: 20px;
+@mixin btn-style($url, $btn-size, $border-w: 0) {
+  height: $btn-size;
+  width: $btn-size;
 
   border: none;
-  background: $url no-repeat center;
+  border-right: $border-w solid #f1f1f1;
+  background: transparent $url no-repeat center;
 
   &:hover {
     animation: 1.2s ease-in-out 0s normal none running trambling-animation;

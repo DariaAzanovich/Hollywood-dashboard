@@ -42,6 +42,7 @@
 }
 
 .monthly-revelue {
+  flex-grow: 1;
   @include flexible(center, center, nowrap, column);
   @include statistic-text;
   // width: 71%;
@@ -53,6 +54,7 @@
 }
 
 .customers-feed {
+  flex-grow: 10;
   width: 35%;
   height: 508px;
   padding: 1em;
@@ -72,6 +74,7 @@
 .revenue-hour,
 .progress-statistic,
 .shipments {
+  // flex-grow: 1;
   @include statistic-text;
   @include statistic-list;
 

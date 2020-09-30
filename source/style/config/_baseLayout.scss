@@ -16,11 +16,12 @@ body {
   margin: 0 auto;
 
   font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
 
 .container {
   @include flexible(flex-start, flex-start, wrap);
-  width: 94.8%;
+  width: 95%;
 
   @include sm {
     @include flexible(flex-start, center, nowrap, column);
