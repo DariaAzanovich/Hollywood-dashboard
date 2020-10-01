@@ -127,17 +127,12 @@
   // flex-grow: 10;
   width: 35%;
   height: 508px;
-
-  background-color:darkslateblue;
 }
 
 //------------------------- todays-task ------------------------------------
 .todays-task {
   // flex-grow: 10;
-  width: 100%;
-  height: 245px;
-
-  background-color:darkslateblue;
+  width: calc(100% - 1.5em);
 
   @include paragraph-style;
   white-space: nowrap;
@@ -149,6 +144,8 @@
 
     border-bottom: 2px solid #ededed;
     list-style: none;
+
+    overflow: auto;
   }
 
   &__item {    
@@ -168,9 +165,15 @@
 
   &__feed {
     padding: 0 1.8em;
+
+    @include md {
+      width: 40%;
+      overflow: hidden;
+    }
   }
 
   &__time {
+    width: 80px;
     padding-left: 20px;
 
     background: $pic-wall-clock no-repeat left;

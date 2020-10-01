@@ -88,26 +88,6 @@ abbr[title] {
   text-decoration: underline dotted; /* 2 */
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
 
 /**
  * Add the correct font size in all browsers.
@@ -117,26 +97,6 @@ small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
 
 /* Embedded content
    ========================================================================== */
@@ -255,14 +215,6 @@ progress {
 }
 
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
@@ -271,15 +223,6 @@ textarea {
 [type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
 }
 
 /**
@@ -346,4 +289,13 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+/**
+* For all elements: add correct box-sizing, delete all margins
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
