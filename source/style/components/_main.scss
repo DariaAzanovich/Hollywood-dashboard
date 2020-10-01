@@ -1,6 +1,5 @@
 .main {
   @include flexible(space-between, center, wrap);
-  // height: 87.7vh;
   // max-height: 835px;
   @include sm {
     width: 100%;
@@ -18,11 +17,10 @@
     // align-self: flex-start;
     @include flexible(center, center, nowrap, column);
 
-    // width: 644px;
-    // height: 100px;
     margin-right: 1.25em;
     margin-bottom: 1.25em;
-    
+    padding: 1.5em;
+
     box-shadow: 0px 0px 10px #888888;
     background-color:#ffffff;
   }
@@ -48,7 +46,6 @@
   flex-grow: 1;
   
   width: 100%;
-  padding: 1em;
 
   @include statistic-text;
   overflow-x: auto;
@@ -130,7 +127,6 @@
   // flex-grow: 10;
   width: 35%;
   height: 508px;
-  padding: 1em;
 
   background-color:darkslateblue;
 }
@@ -138,11 +134,47 @@
 //------------------------- todays-task ------------------------------------
 .todays-task {
   // flex-grow: 10;
-  width: 60%;
+  width: 100%;
   height: 245px;
-  padding: 1em;
 
   background-color:darkslateblue;
+
+  @include paragraph-style;
+  white-space: nowrap;
+
+  &__list {
+    @include flexible(flex-start, center, nowrap, column);
+    width: 100%;
+    padding: 0;
+
+    border-bottom: 2px solid #ededed;
+    list-style: none;
+  }
+
+  &__item {    
+    @include flexible(space-between, center);
+    width: 100%;
+    padding: 1em 0;
+
+    border-top: 2px solid #ededed;
+  }
+  //------
+
+  &__task {
+    color: $theme-color;
+
+    font-weight: 900;
+  }
+
+  &__feed {
+    padding: 0 1.8em;
+  }
+
+  &__time {
+    padding-left: 20px;
+
+    background: $pic-wall-clock no-repeat left;
+  }
 }
 
 .revenue-hour,
@@ -153,7 +185,6 @@
   @include statistic-list;
 
   width: 241px;
-  padding: 1em;
 
   background-color:#ffffff;
 
