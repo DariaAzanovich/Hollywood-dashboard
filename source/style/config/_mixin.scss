@@ -64,11 +64,11 @@
     @include paragraph-style;
   
     &:first-child{
-      list-style-image: url(../../source/img/purple-triangle.png);
+      list-style-image: $pic-purple-triangle;
     }
   
     &:last-child {
-      list-style-image: url(../../source/img/pink-triangle.png);
+      list-style-image: $pic-pink-triangle;
     }
   }
 }

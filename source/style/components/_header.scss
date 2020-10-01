@@ -117,7 +117,7 @@
 
     &-btn {
       @include bnt-input-border;
-      @include btn-style($pic-user-settings, $small-btn-size);
+      @include btn-style($pic-settings, $small-btn-size);
     }
   }
 
