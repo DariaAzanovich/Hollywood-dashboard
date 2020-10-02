@@ -1,8 +1,7 @@
-.aside {//background-color: wheat;
-  // align-self: flex-end;
+.aside {
   @include flexible(center, center, nowrap, column);
   width: 100%;
-// -------------------- .aside__bar ------------------------------
+// -------------------- .aside__bar
   &__bar {
 
     @include flexible(center, center);
@@ -38,7 +37,7 @@
     }
   }
 
-// -------------------- .aside__link ------------------------------
+// -------------------- .aside__link
 
   &__link--users {
     background: url(../../source/img/aside/icons/users.png) no-repeat center;
@@ -52,7 +51,7 @@
     background: url(../../source/img/aside/icons/like.png) no-repeat center;
   }
 
-// ------------------- aside-list -----------------------
+// ------------------- aside-list
 
   &__list {
     @include flexible(center, flex-start, nowrap, column);
@@ -93,25 +92,9 @@
       @include btn-style($pic-chat-grey, $small-btn-size);
       @include bnt-input-border;      
     }
-
-  /*  & img,
-    &-text {
-      margin: 0 15px;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 81px;
-      left: 25px;
-      
-      height: 2px;
-      width: 80%;
-      background-color: #f2f2f2;
-    } */
   } 
 
-  // ---------------------- aside__search -------------------
+  // ---------------------- aside__search 
   &__search {
     @include flexible(space-around, center);
 

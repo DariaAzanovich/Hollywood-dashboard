@@ -597,6 +597,10 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .nav__gamburger:hover {
+    -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+            animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  }
 }
 
 .nav__gamburger::before {
@@ -1155,7 +1159,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  width: 100%;
+  min-height: 250px;
   overflow-x: auto;
 }
 
@@ -1387,6 +1391,9 @@ body {
 .revenue-hour,
 .progress-statistic,
 .shipments {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 241px;
   background-color: #ffffff;
 }
@@ -1518,9 +1525,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0;
 }
 
@@ -1651,21 +1655,6 @@ body {
   width: 100%;
   padding: 20px 0;
   border-bottom: 2px solid #f2f2f2;
-  /*  & img,
-    &-text {
-      margin: 0 15px;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 81px;
-      left: 25px;
-      
-      height: 2px;
-      width: 80%;
-      background-color: #f2f2f2;
-    } */
 }
 
 .aside__item img {
@@ -1807,8 +1796,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: auto;
   width: 100%;
+  margin-top: auto;
   padding: 1.5em;
 }
 

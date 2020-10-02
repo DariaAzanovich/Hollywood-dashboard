@@ -107,7 +107,7 @@
   }
 }
 
-//---------------------- Gamburger menu ------------------------------
+//---------------------- burger menu ------------------------------
 .nav__gamburger {
   display: none;
   position: relative;
@@ -123,6 +123,10 @@
 
   @include md {
     display: flex;
+    
+    &:hover {
+      animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+    }
   }
 }
 

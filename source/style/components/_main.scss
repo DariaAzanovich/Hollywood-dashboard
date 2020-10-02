@@ -46,13 +46,15 @@
   @include paragraph-style;
   align-items: center;
   flex-grow: 1;
+
+  min-height: 250px;
   
-  width: 100%;
+  // width: 100%;
 
   @include statistic-text;
   overflow-x: auto;
 
-    //------------------------- monthly-revelue____interval
+  //------------------------- monthly-revelue____interval
   &__interval {
     width: 90%;
     @include flexible(space-between, center, nowrap);
@@ -185,7 +187,7 @@
 .revenue-hour,
 .progress-statistic,
 .shipments {
-  // flex-grow: 1;
+  flex-grow: 1;
   @include statistic-text;
   @include statistic-list;
 
@@ -241,7 +243,7 @@
 .wrap-main {
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   margin: 0;
 }
 

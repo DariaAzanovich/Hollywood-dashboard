@@ -1,8 +1,8 @@
 .footer {
   @include flexible(space-around, center, wrap, column);  
-  // height: 229px;
-  margin-top: auto;
+  
   width: 100%;
+  margin-top: auto;  
   padding: 1.5em;
 
   @include sm {
