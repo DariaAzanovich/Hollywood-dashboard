@@ -145,7 +145,7 @@
 
   &__list {
     @include flexible(space-around, center, nowrap);
-    width: 100%;
+    flex-grow: 1;
     padding: 0.1em;
     
     list-style: none;
