@@ -62,6 +62,8 @@
 
   //-------------- .header-nav__search
   &__search {
+    @include bnt-input-border;
+    
     margin: 0 10%;
     width: 30%;
     min-width: 40px;
@@ -78,6 +80,7 @@
     @include md {
       margin: 0 $line-width;
       width: $big-btn-size;
+
       &::placeholder {
         color: transparent;
       }

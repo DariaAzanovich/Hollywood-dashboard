@@ -796,6 +796,10 @@ body {
   border-radius: 15px;
 }
 
+.header-nav__search:active, .header-nav__search:focus {
+  outline: none;
+}
+
 .header-nav__search::-webkit-input-placeholder {
   color: #c8c8c8;
 }
