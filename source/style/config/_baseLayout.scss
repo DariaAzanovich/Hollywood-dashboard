@@ -8,7 +8,7 @@ body {
 .wrap {
   position: relative;
 
-  @include flexible(center, flex-start, wrap);
+  @include flexible(flex-start, flex-start, wrap);
 
   max-width: $max-width;
   margin: 0 auto;
