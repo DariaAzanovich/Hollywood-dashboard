@@ -15,6 +15,10 @@
     height: 70px;
   }
 
+  @include xl {
+    width: 70px;
+  }
+
   //---------------------- .nav__link 
 
   &__link {

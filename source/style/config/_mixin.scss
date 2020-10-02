@@ -100,16 +100,9 @@
   }
 }
 
-// Large devices
-@mixin lg {
-  @media (max-width: #{$screen-lg-max}) {
-      @content;
-  }
-}
-
 // Extra large devices
 @mixin xl {
-  @media (max-width: #{$screen-xl-max}) {
+  @media (min-width: #{$screen-xl-max}) {
       @content;
   }
 }
