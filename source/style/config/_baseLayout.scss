@@ -4,6 +4,7 @@ body {
   text-align: center;
 }
 
+//------------------------------- page ---------------------------------
 .wrap {
   position: relative;
   @include flexible(center, flex-start, wrap);
@@ -13,6 +14,8 @@ body {
   font-family: 'Lato', sans-serif;
   overflow: hidden;
 }
+
+//------------------------------- header + main + aside + footer -------
 
 .container {
   @include flexible(flex-start, flex-start, wrap);
@@ -28,6 +31,7 @@ body {
   }
 }
 
+//------------------------------- aside + footer ----------------------
 .container-inside {
   @include flexible(flex-start, center, nowrap, column);
   
