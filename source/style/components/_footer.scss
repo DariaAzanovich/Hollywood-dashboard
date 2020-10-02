@@ -1,6 +1,7 @@
-.footer { //background-color: darkseagreen;
+.footer {
   @include flexible(space-around, center, wrap, column);  
   // height: 229px;
+  margin-top: auto;
   width: 100%;
   padding: 1.5em;
 
@@ -13,21 +14,22 @@
     margin-bottom: 1.5em;
   }
 
-  &__list {
-    @include flexible(center, center, wrap); 
-    padding: 0;
-    list-style: none;
-    
-    
+  &__icons {
     @include sm {
-      width: 80%;
-      margin: 0 auto;
+      width: 100%;
+      // margin: 0 auto;
     }
 
     @include md {
       width: 70%;
       margin: 0 auto;
     }
+  }
+
+  &__list {
+    @include flexible(center, center, wrap); 
+    padding: 0;
+    list-style: none;
   }
 
   &__item {    

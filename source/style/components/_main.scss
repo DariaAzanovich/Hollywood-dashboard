@@ -1,8 +1,10 @@
 .main {
+  height: 100vh;
   @include flexible(space-between, center, wrap);
   // max-height: 835px;
   @include sm {
     width: 100%;
+    height: auto;
   }
   
   width: calc(100% - #{$container-inside-width});
