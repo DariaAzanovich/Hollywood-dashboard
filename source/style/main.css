@@ -1791,6 +1791,14 @@ body {
   padding: 1.5em;
 }
 
+@media (max-width: 576px) {
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer__title {
   font-size: 14px;
   font-weight: 900;
@@ -1820,7 +1828,15 @@ body {
 
 @media (max-width: 576px) {
   .footer__list {
-    width: 50%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__list {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 

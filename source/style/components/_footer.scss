@@ -4,6 +4,10 @@
   width: 100%;
   padding: 1.5em;
 
+  @include sm {
+    justify-content: center; 
+  }
+
   &__title {
     @include primary-title;
     margin-bottom: 1.5em;
@@ -14,8 +18,15 @@
     padding: 0;
     list-style: none;
     
+    
     @include sm {
-      width: 50%; 
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include md {
+      width: 70%;
+      margin: 0 auto;
     }
   }
 
