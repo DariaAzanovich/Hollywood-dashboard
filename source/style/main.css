@@ -370,7 +370,6 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  height: 100vh;
   margin-left: 5%;
 }
 
@@ -391,14 +390,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: auto;
   }
 }
 
 @media (max-width: 768px) {
   .container {
     width: 100%;
-    height: auto;
     margin: 0;
   }
 }
@@ -1079,7 +1076,6 @@ body {
 }
 
 .main {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1105,7 +1101,6 @@ body {
 @media (max-width: 576px) {
   .main {
     width: 100%;
-    height: auto;
   }
 }
 
@@ -1310,16 +1305,27 @@ body {
 }
 
 .customers-feed {
-  width: 35%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 15%;
   height: 508px;
 }
 
 .todays-task {
-  width: calc(100% - 1.5em);
   font-size: 12px;
   font-weight: 700;
   color: #bfbfbf;
   white-space: nowrap;
+  overflow-x: auto;
+}
+
+@media (min-width: 1280px) {
+  .todays-task {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 .todays-task__list {
@@ -1378,7 +1384,6 @@ body {
 @media (max-width: 768px) {
   .todays-task__feed {
     width: 40%;
-    overflow: hidden;
   }
 }
 
@@ -1391,9 +1396,6 @@ body {
 .revenue-hour,
 .progress-statistic,
 .shipments {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   width: 241px;
   background-color: #ffffff;
 }
@@ -1472,6 +1474,9 @@ body {
 
 .revenue-hour {
   width: 264px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .progress-statistic__content {
@@ -1499,6 +1504,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 768px) {
+  .progress-statistic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .shipments__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1520,26 +1533,52 @@ body {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .shipments {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .wrap-main {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
   margin: 0;
 }
 
 .wrap-inner {
-  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0;
-}
-
-@media (max-width: 576px) {
-  .wrap-inner {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .aside {
@@ -1797,7 +1836,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  margin-top: auto;
   padding: 1.5em;
 }
 
