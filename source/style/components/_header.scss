@@ -135,6 +135,7 @@
   @include primary-title;
   font-size: 12px;
   @include statistic-text;
+  
   overflow: auto;
 
   &__title {

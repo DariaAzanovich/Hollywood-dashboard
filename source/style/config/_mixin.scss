@@ -102,6 +102,13 @@
 
 // Extra large devices
 @mixin xl {
+  @media (min-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
   @media (min-width: #{$screen-xl-max}) {
       @content;
   }

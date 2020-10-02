@@ -1,10 +1,10 @@
 .main {
-  height: 100vh;
+  // height: 100vh;
   @include flexible(space-between, center, wrap);
   // max-height: 835px;
   @include sm {
     width: 100%;
-    height: auto;
+    // height: auto;
   }
   
   width: calc(100% - #{$container-inside-width});
@@ -128,18 +128,24 @@
 
 //------------------------- customers-feed --------------------------------
 .customers-feed {
-  // flex-grow: 10;
-  width: 35%;
+  flex-grow: 1;
+  min-width: 15%;
   height: 508px;
 }
 
 //------------------------- todays-task ------------------------------------
 .todays-task {
   // flex-grow: 10;
-  width: calc(100% - 1.5em);
+  // width: calc(100% - 1.5em);
 
   @include paragraph-style;
   white-space: nowrap;
+
+  overflow-x: auto;
+
+  @include xl {
+    order: 3;
+  }
 
   &__list {
     @include flexible(flex-start, center, nowrap, column);
@@ -172,7 +178,7 @@
 
     @include md {
       width: 40%;
-      overflow: hidden;
+      // overflow: hidden;
     }
   }
 
@@ -187,7 +193,7 @@
 .revenue-hour,
 .progress-statistic,
 .shipments {
-  flex-grow: 1;
+  // flex-grow: 1;
   @include statistic-text;
   @include statistic-list;
 
@@ -212,6 +218,8 @@
 //------------------------- revenue-hour ---------------------------------
 .revenue-hour {
   width: 264px;
+
+  flex-grow: 1;
 }
 
 //------------------------- progress-statistic ---------------------------
@@ -225,6 +233,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  @include md {
+    order: 1;
+  }
 }
 
 //------------------------- shipments -----------------------------------
@@ -236,23 +248,29 @@
   &__text {
     margin: 0;
   }
+
+  @include md {
+    order: 2;
+  }
 }
 
 //------------------------ Widgets wrapper -------------------------------
 
 .wrap-main {
+  @include flexible(space-between, flex-start, wrap);
   width: 100%;
-  justify-content: space-between;
   // align-items: center;
   margin: 0;
+  // overflow: visible;
 }
 
 .wrap-inner {
-  max-width: 60%;
-  justify-content: space-between;
+  // max-width: 60%;
+  @include flexible(space-between, flex-start, wrap);
   margin: 0;
+  width: 100%;
 
   @include sm {
-    width: 100%;
+    
   }
 }

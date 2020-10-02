@@ -2,7 +2,7 @@
   @include flexible(space-around, center, wrap, column);  
   
   width: 100%;
-  margin-top: auto;  
+  // margin-top: auto;  
   padding: 1.5em;
 
   @include sm {
