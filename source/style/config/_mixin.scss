@@ -42,7 +42,7 @@
   width: $small-btn-size;
 
   border: none;
-  border-right: $border-w solid #f1f1f1;
+  border-right: $border-w solid $border-color;
   background: transparent $url no-repeat center;
 
   &:hover {    

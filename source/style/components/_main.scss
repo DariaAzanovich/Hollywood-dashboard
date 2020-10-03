@@ -128,15 +128,68 @@
 
 //------------------------- customers-feed --------------------------------
 .customers-feed {
-  flex-grow: 1;
-  min-width: 15%;
+  @include flexible(center, center);
+
+  flex: auto;
   height: 508px;
+
+
+  overflow-y: auto;
+
+  &__user {
+    @include flexible(space-between, flex-start, nowrap, column);
+
+    height: 90%;
+    margin-right: 2em;
+
+    &-avatar {
+      @include paragraph-style;
+      font-size: 10px;
+    }
+  }
+
+  &__feed {
+    @include flexible(space-between, flex-end, nowrap, column);
+    height: 90%;
+
+    // overflow-y: auto;
+    
+    // &::before {
+    //   content: '';
+
+    //   top: 50px;
+    //   right: 20px;
+
+    //   border: 20px 4px solid $border-color;
+    // }
+    
+  }
+
+  &__user-name {
+    @include primary-title;
+
+    max-width: 345px;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    border: $line-width solid $border-color;
+    background-color: #fafafa;
+
+    text-align: left;
+
+    &:nth-child(n + 2):nth-child(-n + 3) {
+      max-width: 316px;
+    }
+  }
+
+  &__user-feed {
+    @include paragraph-style;
+  }
 }
 
 //------------------------- todays-task ------------------------------------
 .todays-task {
-  // flex-grow: 10;
-  // width: calc(100% - 1.5em);
+  flex: auto;
 
   @include paragraph-style;
   white-space: nowrap;
@@ -178,7 +231,8 @@
 
     @include md {
       width: 40%;
-      // overflow: hidden;
+      
+      overflow: hidden;
     }
   }
 
@@ -193,6 +247,7 @@
 .revenue-hour,
 .progress-statistic,
 .shipments {
+  flex: auto;
   // flex-grow: 1;
   @include statistic-text;
   @include statistic-list;
@@ -209,17 +264,13 @@
   &__content {
     width: 100%;
   }
-
-  @include sm {
-    width: 100%;
-  }
 }
 
 //------------------------- revenue-hour ---------------------------------
 .revenue-hour {
   width: 264px;
 
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 
 //------------------------- progress-statistic ---------------------------
@@ -265,12 +316,7 @@
 }
 
 .wrap-inner {
-  // max-width: 60%;
   @include flexible(space-between, flex-start, wrap);
   margin: 0;
   width: 100%;
-
-  @include sm {
-    
-  }
 }
