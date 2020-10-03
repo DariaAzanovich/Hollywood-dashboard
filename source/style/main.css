@@ -1344,7 +1344,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 90%;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 .customers-feed__user-avatar {
@@ -1399,6 +1399,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  min-height: 258px;
   font-size: 12px;
   font-weight: 700;
   color: #bfbfbf;
@@ -1408,9 +1409,9 @@ body {
 
 @media (min-width: 1280px) {
   .todays-task {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -1464,7 +1465,7 @@ body {
 }
 
 .todays-task__feed {
-  padding: 0 1.8em;
+  padding: 0 1.3em;
 }
 
 @media (max-width: 768px) {
@@ -1478,6 +1479,10 @@ body {
   width: 80px;
   padding-left: 20px;
   background: url(../../source/img/main/wall-clock.png) no-repeat left;
+}
+
+.todays-task__chbox {
+  display: none;
 }
 
 .revenue-hour,
@@ -1621,6 +1626,9 @@ body {
 }
 
 .wrap-main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1641,6 +1649,9 @@ body {
 }
 
 .wrap-inner {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1849,7 +1860,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  padding: 1em 0;
+  padding: 1em;
   font-size: 12px;
   font-weight: 700;
   color: #bfbfbf;
@@ -1915,6 +1926,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin-top: auto;
   padding: 1.5em;
 }
 

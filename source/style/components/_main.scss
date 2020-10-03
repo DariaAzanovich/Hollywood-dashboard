@@ -133,14 +133,13 @@
   flex: auto;
   height: 508px;
 
-
   overflow-y: auto;
 
   &__user {
     @include flexible(space-between, flex-start, nowrap, column);
 
     height: 90%;
-    margin-right: 2em;
+    margin-right: 1em;
 
     &-avatar {
       @include paragraph-style;
@@ -190,6 +189,7 @@
 //------------------------- todays-task ------------------------------------
 .todays-task {
   flex: auto;
+  min-height: 258px;
 
   @include paragraph-style;
   white-space: nowrap;
@@ -197,7 +197,7 @@
   overflow-x: auto;
 
   @include xl {
-    order: 3;
+    order: 1;
   }
 
   &__list {
@@ -218,8 +218,8 @@
 
     border-top: 2px solid #ededed;
   }
-  //------
 
+  //---------------------- task, feed, time
   &__task {
     color: $theme-color;
 
@@ -227,7 +227,7 @@
   }
 
   &__feed {
-    padding: 0 1.8em;
+    padding: 0 1.3em;
 
     @include md {
       width: 40%;
@@ -244,6 +244,15 @@
   }
 }
 
+
+  //---------------------- checkbox
+
+.todays-task__chbox {
+  display: none;
+}
+
+
+//------
 .revenue-hour,
 .progress-statistic,
 .shipments {
@@ -307,7 +316,7 @@
 
 //------------------------ Widgets wrapper -------------------------------
 
-.wrap-main {
+.wrap-main {flex:auto;
   @include flexible(space-between, flex-start, wrap);
   width: 100%;
   // align-items: center;
@@ -315,7 +324,7 @@
   // overflow: visible;
 }
 
-.wrap-inner {
+.wrap-inner {flex:auto;
   @include flexible(space-between, flex-start, wrap);
   margin: 0;
   width: 100%;

@@ -99,7 +99,7 @@
     @include flexible(space-around, center);
 
     width: 100%;
-    padding: 1em 0;
+    padding: 1em;
     @include paragraph-style;
     background-color: #fcfcfc;
     
