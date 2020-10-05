@@ -566,10 +566,6 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-  .nav__gamburger:hover {
-    -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-            animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-  }
 }
 
 .nav__gamburger::before {
