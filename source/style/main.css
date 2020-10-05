@@ -1253,6 +1253,7 @@ body {
           flex: auto;
   -ms-flex-item-align: stretch;
       align-self: stretch;
+  width: 80%;
   overflow-y: auto;
 }
 
@@ -2020,10 +2021,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   .wrap-main {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-  }
-  .progress-statistic,
-  .shipments {
-    width: 35%;
   }
   .nav {
     height: 1043px;
