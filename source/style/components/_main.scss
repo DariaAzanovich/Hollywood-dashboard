@@ -1,10 +1,8 @@
 .main {
-  // height: 100vh;
   @include flexible(space-between, center, wrap);
-  // max-height: 835px;
+
   @include sm {
     width: 100%;
-    // height: auto;
   }
   
   width: calc(100% - #{$container-inside-width});
@@ -16,7 +14,6 @@
   background-color: #ebebeb;
 
   &__box {
-    // align-self: flex-start;
     @include flexible(center, center, nowrap, column);
 
     margin-right: 1.25em;
@@ -128,42 +125,60 @@
 
 //------------------------- customers-feed --------------------------------
 .customers-feed {
-  @include flexible(center, center);
+  @include flexible(center, center, nowrap, column);
 
   flex: auto;
-  // height: 508px;
-  
-  max-width: 400px;
+
+  & > h3 {
+    flex: auto;
+  }
 
   overflow-y: auto;
 
-  &__user {
-    @include flexible(space-between, flex-start, nowrap, column);
+  &__content {
+    @include flexible(flex-start, center);
+  }
 
-    // height: 90%;
+//--------------------- feed users photo
+  &__user {
+    position: relative;
+
+    @include flexible(space-between, flex-start, nowrap, column);
+    @include sm {
+      min-height: 470px;
+    }
+
+    min-height: 350px;
     margin-right: 1em;
 
     &-avatar {
       @include paragraph-style;
       font-size: 10px;
     }
+
+//------------------ feed vertical line
+    &::after {
+      content: '';
+      
+      @include sm {
+        display: none;
+      }
+
+      position: absolute;
+      left: 5em;
+      bottom: 30%;
+
+      height: 10em;
+      width: 5px;
+
+      background-color: $border-color;
+
+    }
   }
 
+//--------------------- feed content
   &__feed {
-    @include flexible(space-between, flex-end, nowrap, column);
-    // height: 90%;
-
-    // overflow-y: auto;
-    
-    // &::before {
-    //   content: '';
-
-    //   top: 50px;
-    //   right: 20px;
-
-    //   border: 20px 4px solid $border-color;
-    // }
-    
+    @include flexible(space-between, flex-end, nowrap, column); 
   }
 
   &__user-name {
@@ -180,7 +195,14 @@
 
     &:nth-child(n + 2):nth-child(-n + 3) {
       max-width: 316px;
+
+      @include md {
+        width: 85%;
+      }
     }
+
+    
+
   }
 
   &__user-feed {
