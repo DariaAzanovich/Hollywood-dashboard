@@ -1229,13 +1229,13 @@ body {
 }
 
 .monthly-revelue__diagram {
-  width: 90%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1250,6 +1250,7 @@ body {
 .monthly-revelue__diagram__list {
   padding: 0;
   margin-right: 1.7em;
+  width: 5%;
 }
 
 .monthly-revelue__diagram__item {
@@ -1259,26 +1260,8 @@ body {
 
 .monthly-revelue__diagram__img {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.monthly-revelue-month {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .monthly-revelue-month__list {
@@ -1323,6 +1306,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  max-width: 500px;
   overflow-y: auto;
 }
 
@@ -1719,14 +1703,10 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
   margin: 0;
 }
 
 .wrap-inner {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
