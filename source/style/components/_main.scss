@@ -371,7 +371,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 .wrap-main {
   flex: auto;
   @include flexible(space-between, flex-start, wrap);
-  // width: 100%;
+  width: 100%;
   margin: 0;
 }
 
