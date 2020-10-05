@@ -96,10 +96,8 @@
   @include flexible(center, center, nowrap, column);
 
   flex: auto;
-
-  & > h3 {
-    flex: auto;
-  }
+  align-self: stretch;
+  // min-height: 508px;
 
   overflow-y: auto;
 
@@ -182,9 +180,6 @@
 
   overflow: auto;
 
-  @include xl {
-    order: 1;
-  }
 
   &__list {
     @include flexible(flex-start, center, nowrap, column);
@@ -296,7 +291,8 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 }
 
 //------------------------- progress-statistic ---------------------------
-.progress-statistic {
+.progress-statistic {  
+  order: 2;
   &__content {
     @include flexible(center, center, nowrap, column);
   }
@@ -306,14 +302,12 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  @include md {
-    order: 1;
-  }
 }
 
 //------------------------- shipments -----------------------------------
-.shipments {
+.shipments {  
+  order: 3;
+
   &__content {
     @include flexible(space-around, center, nowrap, row);
   }
@@ -321,19 +315,11 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   &__text {
     margin: 0;
   }
-
-  @include md {
-    order: 2;
-  }
 }
 
 //------------------------ Widgets wrapper -------------------------------
 
 .wrap-main {
-  @include sm {
-    flex-wrap: wrap;
-  }
-
   flex: auto;
   @include flexible(space-between, flex-start, wrap);
 

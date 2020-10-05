@@ -1,21 +1,10 @@
-@media screen and (min-device-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .wrap-main {
     flex-wrap: nowrap;
-  }
-
-  .customers-feed {
-    align-self: center;
   }
 
   .progress-statistic,
   .shipments {
     width: 35%;
-  }
-}
-
-
-@media screen and (min-device-width: 1360px) {
-  .customers-feed {
-    padding: 2em;
   }
 }

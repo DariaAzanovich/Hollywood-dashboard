@@ -1249,13 +1249,9 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   overflow-y: auto;
-}
-
-.customers-feed > h3 {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
 }
 
 .customers-feed__content {
@@ -1377,14 +1373,6 @@ body {
   color: #bfbfbf;
   white-space: nowrap;
   overflow: auto;
-}
-
-@media (min-width: 1280px) {
-  .todays-task {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
 }
 
 .todays-task__list {
@@ -1560,6 +1548,12 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   width: 264px;
 }
 
+.progress-statistic {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .progress-statistic__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1585,12 +1579,10 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 768px) {
-  .progress-statistic {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
+.shipments {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .shipments__content {
@@ -1614,14 +1606,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .shipments {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
 .wrap-main {
   -webkit-box-flex: 1;
       -ms-flex: auto;
@@ -1643,13 +1627,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
           flex-direction: row;
   max-width: 100%;
   margin: 0;
-}
-
-@media (max-width: 576px) {
-  .wrap-main {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
 .wrap-inner {
@@ -2035,25 +2012,14 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   width: 100%;
 }
 
-@media screen and (min-device-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .wrap-main {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .customers-feed {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
   .progress-statistic,
   .shipments {
     width: 35%;
-  }
-}
-
-@media screen and (min-device-width: 1360px) {
-  .customers-feed {
-    padding: 2em;
   }
 }
 /*# sourceMappingURL=main.css.map */
