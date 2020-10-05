@@ -13,6 +13,8 @@
 
   background-color: #ebebeb;
 
+  overflow: hidden;
+
   &__box {
     @include flexible(center, center, nowrap, column);
 
@@ -41,19 +43,14 @@
 //------------------------- monthly-revelue -------------------------------
 .monthly-revelue {  
   @include paragraph-style;
-  align-items: center;
   flex-grow: 1;
-
-  min-height: 250px;
   
-  // width: 100%;
-
   @include statistic-text;
   overflow-x: auto;
 
   //------------------------- monthly-revelue____interval
   &__interval {
-    width: 90%;
+    align-self: flex-end;
     @include flexible(space-between, center, nowrap);
   }
 
@@ -87,40 +84,10 @@
     }
   }
 
-  //------------------------- monthly-revelue__diagram
-  &__diagram {
-    width: 80%;
-    @include flexible(center, center);
+  //------------------------- monthly-revelue__img
 
-    &__list {
-      padding: 0;
-      margin-right: 1.7em;
-
-      width: 5%;
-    }
-
-    &__item {
-      list-style: none;
-      margin-bottom: 1.5em;
-    }
-
-    &__img {
-      // flex-grow: 1;
-      flex: auto;
-    }
-  }
-
-//------------------------- monthly-revelue-month__list
-  &-month {    
-    &__list {
-      @include flexible(center, center);      
-
-      list-style: none;
-    }
-
-    &__item {
-      padding: 0 1.1em;
-    }
+  &__img {
+    max-width: 100%;
   }
 }
 
@@ -129,8 +96,6 @@
   @include flexible(center, center, nowrap, column);
 
   flex: auto;
-
-  max-width: 500px;
 
   & > h3 {
     flex: auto;
@@ -182,12 +147,13 @@
 //--------------------- feed content
   &__feed {
     @include flexible(space-between, flex-end, nowrap, column); 
+    width: 80%;
   }
 
   &__user-name {
     @include primary-title;
 
-    max-width: 345px;
+    max-width: 95%;
     padding: 1em;
     margin-bottom: 1em;
 
@@ -197,11 +163,7 @@
     text-align: left;
 
     &:nth-child(n + 2):nth-child(-n + 3) {
-      max-width: 316px;
-
-      @include md {
-        width: 85%;
-      }
+      max-width: 85%;
     }
   }
 
@@ -218,7 +180,7 @@
   @include paragraph-style;
   white-space: nowrap;
 
-  overflow-x: auto;
+  overflow: auto;
 
   @include xl {
     order: 1;
@@ -309,11 +271,11 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 .progress-statistic,
 .shipments {
   flex: auto;
-  // flex-grow: 1;
+  width: 241px;
+
   @include statistic-text;
   @include statistic-list;
 
-  width: 241px;
 
   background-color:#ffffff;
 
@@ -329,9 +291,8 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 
 //------------------------- revenue-hour ---------------------------------
 .revenue-hour {
+  min-height: 270px;
   width: 264px;
-
-  // flex-grow: 1;
 }
 
 //------------------------- progress-statistic ---------------------------
@@ -369,15 +330,21 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 //------------------------ Widgets wrapper -------------------------------
 
 .wrap-main {
+  @include sm {
+    flex-wrap: wrap;
+  }
+
   flex: auto;
   @include flexible(space-between, flex-start, wrap);
+
   max-width: 100%;
   margin: 0;
 }
 
 .wrap-inner {
-  // flex: auto;
+  flex: auto;
   @include flexible(space-between, flex-start, wrap);
-  margin: 0;
+
   max-width: 100%;
+  margin: 0;
 }
