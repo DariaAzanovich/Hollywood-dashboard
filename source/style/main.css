@@ -1323,7 +1323,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
-  height: 508px;
+  max-width: 400px;
   overflow-y: auto;
 }
 
@@ -1343,7 +1343,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 90%;
   margin-right: 1em;
 }
 
@@ -1370,7 +1369,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 90%;
 }
 
 .customers-feed__user-name {
@@ -1483,6 +1481,30 @@ body {
 
 .todays-task__chbox {
   display: none;
+}
+
+.pseudocheckbox::before {
+  content: "\00A0";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 16px;
+  border: 2px solid #B0B0B0;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 16px;
+  color: #808080;
+}
+
+input[type=checkbox]:checked + .pseudocheckbox::before {
+  content: "\2713";
+  background: -webkit-gradient(linear, left top, left bottom, from(#fc6863), color-stop(#fc6c61), to(#fd5570));
+  background: linear-gradient(#fc6863, #fc6c61, #fd5570);
+  border-color: #fc715d;
+  color: #ffffff;
 }
 
 .revenue-hour,
@@ -1926,7 +1948,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  margin-top: auto;
   padding: 1.5em;
 }
 

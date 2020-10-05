@@ -131,14 +131,16 @@
   @include flexible(center, center);
 
   flex: auto;
-  height: 508px;
+  // height: 508px;
+  
+  max-width: 400px;
 
   overflow-y: auto;
 
   &__user {
     @include flexible(space-between, flex-start, nowrap, column);
 
-    height: 90%;
+    // height: 90%;
     margin-right: 1em;
 
     &-avatar {
@@ -149,7 +151,7 @@
 
   &__feed {
     @include flexible(space-between, flex-end, nowrap, column);
-    height: 90%;
+    // height: 90%;
 
     // overflow-y: auto;
     
@@ -251,6 +253,34 @@
   display: none;
 }
 
+.pseudocheckbox::before {  
+  content: "\00A0";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+
+  box-sizing: border-box;
+
+  line-height: 16px;
+  border: 2px solid #B0B0B0;
+  border-radius: 50%;
+  
+  background-color: white;
+  font-size: 16px;
+  color: #808080;
+ 
+}
+
+input[type=checkbox]:checked + .pseudocheckbox::before { 
+  content: "\2713"; 
+
+  background: $theme-bg;
+  border-color: $theme-color;
+  
+  color: #ffffff;
+}
+
 
 //------
 .revenue-hour,
@@ -316,7 +346,8 @@
 
 //------------------------ Widgets wrapper -------------------------------
 
-.wrap-main {flex:auto;
+.wrap-main {
+  flex: auto;
   @include flexible(space-between, flex-start, wrap);
   width: 100%;
   // align-items: center;
@@ -324,7 +355,8 @@
   // overflow: visible;
 }
 
-.wrap-inner {flex:auto;
+.wrap-inner {
+  flex: auto;
   @include flexible(space-between, flex-start, wrap);
   margin: 0;
   width: 100%;
