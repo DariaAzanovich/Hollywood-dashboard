@@ -102,7 +102,7 @@
   overflow-y: auto;
 
   &__content {
-    @include flexible(flex-start, center);
+    @include flexible(center, center);
   }
 
 //--------------------- feed users photo

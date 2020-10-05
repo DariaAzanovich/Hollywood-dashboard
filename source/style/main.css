@@ -401,6 +401,8 @@ body {
 }
 
 .container-inside {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1258,9 +1260,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1669,6 +1671,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin-bottom: auto;
 }
 
 .aside__bar {
@@ -1907,6 +1910,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin-top: auto;
   padding: 1.5em;
 }
 
@@ -2020,6 +2024,9 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   .progress-statistic,
   .shipments {
     width: 35%;
+  }
+  .nav {
+    height: 1043px;
   }
 }
 /*# sourceMappingURL=main.css.map */

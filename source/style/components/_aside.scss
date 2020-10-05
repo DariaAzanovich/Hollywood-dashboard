@@ -1,6 +1,7 @@
 .aside {
   @include flexible(center, center, nowrap, column);
   width: 100%;
+  margin-bottom: auto;
 // -------------------- .aside__bar
   &__bar {
 

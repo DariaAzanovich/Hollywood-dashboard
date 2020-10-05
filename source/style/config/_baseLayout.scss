@@ -37,6 +37,7 @@ body {
 
 //------------------------------- aside + footer ----------------------
 .container-inside {
+  align-self: stretch;
   @include flexible(flex-start, center, nowrap, column);
   
   width: $container-inside-width;
