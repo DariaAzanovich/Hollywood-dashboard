@@ -1374,7 +1374,7 @@ body {
   left: 5em;
   bottom: 30%;
   height: 10em;
-  width: 5px;
+  width: 3px;
   background-color: #f1f1f1;
 }
 
@@ -1703,7 +1703,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -1724,7 +1724,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .aside {

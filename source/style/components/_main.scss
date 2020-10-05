@@ -172,7 +172,7 @@
       bottom: 30%;
 
       height: 10em;
-      width: 5px;
+      width: 3px;
 
       background-color: $border-color;
 
@@ -371,7 +371,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 .wrap-main {
   flex: auto;
   @include flexible(space-between, flex-start, wrap);
-  width: 100%;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -379,5 +379,5 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
   // flex: auto;
   @include flexible(space-between, flex-start, wrap);
   margin: 0;
-  width: 100%;
+  max-width: 100%;
 }
