@@ -294,36 +294,6 @@ template {
   margin: 0;
 }
 
-@-webkit-keyframes trambling-animation {
-  0%, 50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10%, 30% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  20%, 40% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-}
-
-@keyframes trambling-animation {
-  0%, 50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10%, 30% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  20%, 40% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-}
-
 body {
   min-height: 100vh;
   width: 100vw;
@@ -1073,8 +1043,7 @@ body {
 }
 
 .header-daily__btn:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
+  background-color: #fffafa;
 }
 
 .main {
@@ -1990,11 +1959,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 
 .footer__item--vk {
   background-color: #ffa500;
-}
-
-.footer__item:hover {
-  -webkit-animation: 1.2s ease-in-out 0s normal none running trambling-animation;
-          animation: 1.2s ease-in-out 0s normal none running trambling-animation;
 }
 
 .footer__link {
