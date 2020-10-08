@@ -1428,7 +1428,7 @@ body {
 }
 
 .todays-task__feed {
-  padding: 0 1.3em;
+  margin: 0 1.3em;
 }
 
 @media (max-width: 768px) {
