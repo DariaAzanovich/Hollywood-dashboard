@@ -8,13 +8,6 @@
   flex-direction: $direction;
 }
 
-// @mixin adaptive-font($pcSize, $mobSize) {
-//   $addSize: $pcSize - $mobSize;
-//   $max-width: $max-width - 320;
-//   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$max-width}));
-// }
-
-
 //------------------- Text style modules ------------------------
 
 @mixin primary-title {
@@ -24,18 +17,12 @@
 }
 
 @mixin paragraph-style {
-  font-size: 12px;  
+  font-size: 12px;
   font-weight: 700;
   color: $theme-paragraph-color;
 }
 
 //---------------- Buttons & input style modules -----------------
-@mixin bnt-input-border {
-  &:active,
-  &:focus {
-    outline: none;
-  }
-}
 
 @mixin btn-style($url, $btn-size, $border-w: 0) {
   height: $btn-size;
@@ -45,11 +32,10 @@
   border-right: $border-w solid $border-color;
   background: transparent $url no-repeat center;
 
-  &:hover {    
+  &:hover {
     background-color: $hover-color;
+    cursor: pointer;
   }
-
-  @include bnt-input-border;
 }
 
 //------------------ Statistic text & list style module ----------------
@@ -59,14 +45,14 @@
     padding: 0;
     @include flexible(space-around, center);
   }
-  
+
   &__item {
     @include paragraph-style;
-  
+
     &:first-child{
       list-style-image: $pic-purple-triangle;
     }
-  
+
     &:last-child {
       list-style-image: $pic-pink-triangle;
     }
@@ -85,7 +71,7 @@
 
 
 //------------------ Adaptive for different screen sizes -------------
-  
+
 // Small devices
 @mixin sm {
   @media (max-width: #{$screen-sm-max}) {
@@ -113,4 +99,3 @@
       @content;
   }
 }
-

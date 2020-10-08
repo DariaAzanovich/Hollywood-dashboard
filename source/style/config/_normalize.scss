@@ -299,3 +299,13 @@ template {
   box-sizing: border-box;
   margin: 0;
 }
+
+/**
+* Reset active & focus styl4s for button & input
+*/
+button:active,
+input:active,
+button:focus,
+input:focus {
+  outline: none;
+}

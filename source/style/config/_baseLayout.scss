@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  width: 100vw;
+
   text-align: center;
 }
 
@@ -22,7 +22,6 @@ body {
 .container {
   @include flexible(flex-start, flex-start, wrap);
   width: 100%;
-  // height: 100vh;
   margin-left: 5%;
 
   @include sm {
@@ -30,7 +29,7 @@ body {
   }
 
   @include md {
-    width: 100%;    
+    width: 100%;
     margin: 0;
   }
 }
@@ -39,11 +38,25 @@ body {
 .container-inside {
   align-self: stretch;
   @include flexible(flex-start, center, nowrap, column);
-  
+
   width: $container-inside-width;
   box-shadow: -3px 0px 5px -5px #888888;
 
   @include sm {
     width: 100%;
   }
+}
+
+
+//------------------------------- shares -----------------------------
+.shares {
+  @include paragraph-style;
+  padding-left: 1em;
+}
+
+.shares--rise {
+  background: $pic-purple-triangle no-repeat left;
+}
+.shares--down {
+  background: $pic-pink-triangle no-repeat left;
 }

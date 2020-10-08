@@ -38,6 +38,11 @@
   &__img {
     margin-bottom: 1.5em;
   }
+
+  &__shares {
+    @include flexible(space-between, center, nowrap);
+    width: 6.25em;
+  }
 }
 
 //------------------------- monthly-revelue -------------------------------
@@ -81,6 +86,7 @@
       border-radius: 15px;
 
       color: #ffffff;
+      cursor: pointer;
     }
   }
 

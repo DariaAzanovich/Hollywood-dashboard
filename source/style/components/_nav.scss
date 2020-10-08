@@ -9,7 +9,7 @@
 
   @include md {
     position: static;
-    
+
     @include flexible(space-between, center);
     width: 100%;
     height: 70px;
@@ -19,7 +19,7 @@
     width: 70px;
   }
 
-  //---------------------- .nav__link 
+  //---------------------- .nav__link
 
   &__link {
     position: relative;
@@ -50,7 +50,7 @@
     }
   }
 
-//------------------ All &__link except first-child 
+//------------------ All &__link except first-child
   &__link--home {
     background: url(../../source/img/nav/home.png) no-repeat center;
   }
@@ -76,14 +76,14 @@
     background: url(../../source/img/nav/power-button.png) no-repeat center;
   }
 
-//---------------------- :hover 
+//---------------------- :hover
   &__link:first-child:hover {
     background-color:$hover-color;
   }
 
   &__link:hover {
-    background-color: #fc6863;
-//---------------------- triangular pointer 
+    background-color: #c44456;
+//---------------------- triangular pointer
     &:nth-child(1n + 2):after {
       content: '';
       position: absolute;
@@ -94,7 +94,7 @@
       height: 0;
 
       border-top: $triangle-edge solid transparent;
-      border-left: $triangle-base solid $theme-color;
+      border-left: $triangle-base solid #c44456;
       border-bottom: $triangle-edge solid transparent;
 
     }
