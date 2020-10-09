@@ -186,16 +186,16 @@
 
   overflow: auto;
 
-
   &__list {
     @include flexible(flex-start, center, nowrap, column);
     width: 100%;
+
     padding: 0;
 
     border-bottom: 2px solid #ededed;
     list-style: none;
 
-    overflow: auto;
+    overflow-y: scroll;
   }
 
   &__item {    
@@ -204,6 +204,10 @@
     padding: 1em 0;
 
     border-top: 2px solid #ededed;
+
+    &:nth-child(even) {
+      background-color: #fcfcfc;
+    }
   }
 
   //---------------------- task, feed, time
