@@ -11,8 +11,11 @@
   border-bottom: 2px solid #f1f1f1;
   
   &__form {
+    @include flexible(space-around, center, nowrap);
+    flex-grow: 2;
+
     @include sm {
-      display: none;
+     display: none;
     }
   }
 
@@ -47,15 +50,6 @@
     &--planet {
       @include btn-style($pic-planet, $big-btn-size);
     }    
-  }
-
-  &__form {
-    @include flexible(space-around, center, nowrap);
-    flex-grow: 2;
-
-    @include sm {
-     display: none;
-    }
   }
 
   //-------------- .header-nav__search
