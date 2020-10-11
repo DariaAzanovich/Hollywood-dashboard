@@ -8,8 +8,8 @@
   width: calc(100% - #{$container-inside-width});
   min-width: 320px;
 
-  padding-top: 1.25em;
-  padding-left: 1.25em;
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
 
   background-color: #ebebeb;
 
@@ -18,8 +18,8 @@
   &__box {
     @include flexible(center, center, nowrap, column);
 
-    margin-right: 1.25em;
-    margin-bottom: 1.25em;
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
     padding: 1.5em;
 
     box-shadow: 0px 0px 10px #888888;
@@ -275,6 +275,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 .revenue-hour,
 .progress-statistic,
 .shipments {
+  align-self: stretch;
   flex: auto;
   width: 241px;
 
@@ -296,7 +297,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 
 //------------------------- revenue-hour ---------------------------------
 .revenue-hour {
-  min-height: 270px;
   width: 264px;
 }
 

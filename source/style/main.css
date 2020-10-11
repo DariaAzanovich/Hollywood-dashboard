@@ -1088,8 +1088,8 @@ body {
           flex-direction: row;
   width: calc(100% - 271px);
   min-width: 320px;
-  padding-top: 1.25em;
-  padding-left: 1.25em;
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
   background-color: #ebebeb;
   overflow: hidden;
 }
@@ -1116,8 +1116,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 1.25em;
-  margin-bottom: 1.25em;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
   padding: 1.5em;
   -webkit-box-shadow: 0px 0px 10px #888888;
           box-shadow: 0px 0px 10px #888888;
@@ -1492,6 +1492,9 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 .revenue-hour,
 .progress-statistic,
 .shipments {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
@@ -1564,7 +1567,6 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
 }
 
 .revenue-hour {
-  min-height: 270px;
   width: 264px;
 }
 
@@ -2020,7 +2022,7 @@ input[type=checkbox]:checked + .pseudocheckbox::before {
         flex-wrap: nowrap;
   }
   .nav {
-    height: 1043px;
+    height: 1055px;
   }
 }
 /*# sourceMappingURL=main.css.map */
