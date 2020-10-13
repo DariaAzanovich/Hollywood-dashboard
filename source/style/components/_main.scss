@@ -99,6 +99,7 @@
 
 //------------------------- customers-feed --------------------------------
 .customers-feed {
+  position: relative;
   @include flexible(center, center, nowrap, column);
 
   flex: auto;
@@ -111,53 +112,54 @@
     @include flexible(center, center);
   }
 
-//--------------------- feed users photo
-  &__user {
-    position: relative;
+//--------------------------------- list
 
+  &__list {
     @include flexible(space-between, flex-start, nowrap, column);
+
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  &__item {
+    @include flexible(space-between, flex-start);
+    
+    &:nth-child(n + 2):nth-child(-n + 3) {
+      width: 80%;
+      justify-content: flex-end;
+      align-self: flex-end;
+    }
+
     @include sm {
-      min-height: 470px;
-    }
+      @include flexible(center, center, nowrap, column);
+      width: 100%;
 
-    min-height: 350px;
-    margin-right: 1em;
-
-    &-avatar {
-      @include paragraph-style;
-      font-size: 10px;
-    }
-
-//------------------ feed vertical line
-    &::after {
-      content: '';
-      
-      @include sm {
-        display: none;
+      &:nth-child(n + 2):nth-child(-n + 3) {
+        width: 100%;
       }
+    }
+  }
 
-      position: absolute;
-      left: 5em;
-      bottom: 30%;
+  //--------------------- feed users photo
+  &__user-avatar {
+    @include paragraph-style;
+    font-size: 10px;
 
-      height: 10em;
-      width: 3px;
-
-      background-color: $border-color;
-
+    & img {
+      margin-bottom: 1em;        
+    }
+    
+    @include md {
+      margin-bottom: 1em;
     }
   }
 
 //--------------------- feed content
-  &__feed {
-    @include flexible(space-between, flex-end, nowrap, column); 
-    width: 80%;
-  }
-
   &__user-name {
     @include primary-title;
 
-    max-width: 95%;
+    width: 80%;
     padding: 1em;
     margin-bottom: 1em;
 
@@ -166,13 +168,29 @@
 
     text-align: left;
 
-    &:nth-child(n + 2):nth-child(-n + 3) {
-      max-width: 85%;
+    @include sm {
+      width: 100%;
     }
   }
 
   &__user-feed {
     @include paragraph-style;
+  }
+
+  &__line {    
+    @include sm {
+      display: none;
+    }
+
+    position: absolute;
+    left: 35%;
+    bottom: 30%;
+
+    height: 35%;
+    width: 3px;
+
+    background-color: $border-color;
+
   }
 }
 
